@@ -1,9 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+GeistSans: --font-geist-sans
+GeistMono: --font-geist-mono
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+}
+.principal{
+  
+  background-color:rgb(119,39,129);
+  background-image: radial-gradient(circle, rgba(60,50,129,0.4598433123249299) -50%, rgba(0,0,0,1) 100%);
+
+
+}
+
+.animation-title{
+    animation:1s inicio 1;
+}
+.animation-title-dos{
+  animation:1s inicio-dos 1;
+}
+.animation-button{
+  animation:1s inicio-button 1;
+}
+.animation-imagen{
+  animation:1s inicio-img 1;
+}
+
+@keyframes inicio {
+  0% {
+   opacity:0;
+  }
+  100% {
+    opacity:1
+ 
+  }
+}
+@keyframes inicio-dos {
+  0% {
+   opacity:0;
+  }
+  30%{
+    opacity:0;
+  }
+  100% {
+    opacity:1
+ 
+  }
+}
+@keyframes inicio-button {
+  0% {
+   opacity:0;
+  }
+  60%{
+    opacity:0;
+  }
+  100% {
+    opacity:1
+ 
+  }
+}
+@keyframes inicio-img{
+  0% {
+   opacity:0;
+   transform: translateY(300px);
+  }
+  
+  100% {
+    opacity:1;
+    transform: translateY(0px);
+  }
 }

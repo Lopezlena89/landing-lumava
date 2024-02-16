@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Providers } from "@/components/providers/Providers";
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Lumava Agency",
   description: "Lumava Agency - Desarrollo de Apps",
   authors:[{name:'Luis Mariano Lopez Lena Valdivieso',url:'https://lumava.dev'}],
   abstract:'Page Lumava Agency',
-  category:'Web services'
+  category:'Web services',
+  keywords:['portfolio','web design','Nextjs','React'],
 
 };
 
@@ -19,8 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`} >
+      <body >
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }
