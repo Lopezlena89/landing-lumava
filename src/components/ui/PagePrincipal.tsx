@@ -1,25 +1,20 @@
-'use client'
-import { useRef } from 'react';
-import { Navbar } from "@/components/ui/Navbar";
 
-import { AnimationCarousel } from "@/components/ui/animation-carousel/AnimationCarousel";
-import { AnimationCard } from "@/components/ui/card/AnimationCard";
-import { useScroll,motion, useTransform } from "framer-motion";
+
 import Image from "next/image";
 import Link from "next/link";
+import { Navbar } from "@/components/ui/Navbar";
+import { AnimationCarousel } from "@/components/ui/animation-carousel/AnimationCarousel";
 import { CardShine } from './card-shine/CardShine';
+import { PresenciaLinea } from './texto/PresenciaLinea';
+import { Accesibilidad } from "./texto/Accesibilidad";
+import { MarketingPromocion } from "./texto/MarketingPromocion";
+import { Credibilidad } from "./texto/Credibilidad";
+import { Interaccion } from "./texto/Interaccion";
+import { VentaLinea } from "./texto/VentaLinea";
 
 export const PagePrincipal = () => {
 
-    const ref = useRef<HTMLDivElement>(null)
-    
-    const {scrollYProgress} = useScroll({
-        target:ref,
-        offset:["0 1","1.33 1"]
-    });
-    const scaleProgress = useTransform(scrollYProgress,[0,0.6],[0.7,1]);
-    const opacityProgress = useTransform(scrollYProgress,[0,1],[0.6,1]);
-
+   
     return(
         <>
             
@@ -56,34 +51,56 @@ export const PagePrincipal = () => {
                         
                     </div>
                     <div className="w-full h-[900px] flex justify-center items-center animation-imagen mt-10 ">
-                        <Image alt="ipadpro" src={"/ipadpro.png" } width={900} height={600} />
+                        <Image alt="ipadpro" src={"/ipadpro.png" }  width={900} height={600} style={{width:'auto',height:'auto'}} />
                     </div>
                 </div>
-                <div className="w-full h-[170px] bg-black flex justify-center shadow-inner shadow-purple-400">
+                <div className="w-full h-[150px] bg-black flex justify-center shadow-inner shadow-purple-400">
                     <AnimationCarousel/>
                 </div>
-                <motion.div
-                    ref={ref} 
-                    className="w-full h-[1400px] bg-black mb-3 sm:mb-8 last:mb-0"
-                    style={{
-                        scale:scaleProgress,
-                        opacity:opacityProgress
-                    }}
+                <div
+                   
+                    className="w-full h-[1400px] bg-black"
+                    
                 >
                     {/* TITULO */}
-                    <div className="w-full h-[400px] bg-black flex flex-col justify-center items-center">
-                        <h2 className=" text-8xl bg-gradient-to-r from-blue-700   to-blue-400
+                    <div className="w-full h-[300px] bg-black flex flex-col justify-center items-center">
+                        <h2 className=" text-6xl bg-gradient-to-r from-blue-700   to-blue-400
                                 text-transparent bg-clip-text">El futuro es hoy,</h2>
-                        <p className="text-white text-8xl">oiste viejo </p>
+                        <p className="text-white text-6xl opacity-0 duration-1000 hover:opacity-100 ">oiste viejo </p>
                     </div>
                     {/* Tarjetas */}
-                    <div className="w-full  h-[1000px] bg-[url('/glow-lines.png')] bg-cover bg-no-repeat flex justify-center items-center">
-                        <CardShine/>
-                        <AnimationCard/>
+                    <div className="w-full h-[1000px] bg-[url('/glow-lines.png')] bg-cover bg-no-repeat flex  justify-center items-center">
+                        <div className='w-1/3 h-full flex flex-col items-center relative'>
+                            <div className='w-11/12 h-[400px]  absolute top-0 '>
+                                <CardShine component={<PresenciaLinea/>}/>
+                            </div>
+                            <div className='w-11/12 h-[400px]  absolute bottom-36 '>
+                                <CardShine component={<Accesibilidad/>}/>
+                            </div>
+                            
+                        </div>
+                        <div className='w-1/3 h-full flex flex-col items-center relative  '>
+                            <div className='w-11/12 h-[400px] absolute top-32 '>
+                                <CardShine component ={<MarketingPromocion/>}/>
+                            </div>
+                            <div className='w-11/12 h-[400px] absolute bottom-10 '>
+                                <CardShine component={<Credibilidad/>}/>
+                            </div>
+                        </div>
+                        <div className='w-1/3 h-full flex flex-col items-center relative'>
+                            <div className='w-11/12 h-[400px]  absolute top-0 '>
+                                <CardShine component={<Interaccion/>}/>
+                            </div>
+                            <div className='w-11/12 h-[400px]  absolute bottom-36 '>
+                                <CardShine component={<VentaLinea/>}/>
+                            </div>
+                            
+                        </div>
+                        
 
                         
                     </div>
-                </motion.div>
+                </div>
             </div>
                 
                

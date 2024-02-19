@@ -1,7 +1,8 @@
 'use client';
-import React, { useRef, useState } from 'react';
+import React, { ElementType, JSXElementConstructor, ReactElement, useRef, useState } from 'react';
 
-export const CardShine = () => {
+export const CardShine = ({component}:any ) => {
+    
     const divRef = useRef<HTMLDivElement>(null);
     const [isFocused, setIsFocused] = useState(false);
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -43,7 +44,7 @@ export const CardShine = () => {
         onBlur={handleBlur}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className='relative flex h-[500px] w-[500px]  items-center justify-center overflow-hidden rounded-xl border border-gray-800 bg-gradient-to-r from-black to-gray-950  shadow-2xl'
+        className='relative flex h-full w-full  items-center justify-center overflow-hidden rounded-xl border border-gray-800 bg-gradient-to-r from-black to-gray-950  shadow-2xl'
         >
             <div
                 className='pointer-events-none absolute -inset-px opacity-0 transition duration-300'
@@ -52,11 +53,9 @@ export const CardShine = () => {
                 background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,182,255,.1), transparent 40%)`,
                 }}
             />
-            <div className='w-10/12 h-5/6 border border-solid border-red-100 rounded-xl'>
-                <div className='w-full h-full  '>
-
-                </div>
-            </div>
+           
+            {component}
+          
         </div>
     </>
   )

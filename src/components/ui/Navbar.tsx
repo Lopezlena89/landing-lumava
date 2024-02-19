@@ -16,6 +16,7 @@ export const Navbar = () => {
                             height={130}
                             alt="Picture of the author"
                             className="pl-5 "
+                            
                         />
                     </li>
                     <li className="text-violet-100 ">
