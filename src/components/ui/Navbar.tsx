@@ -6,8 +6,8 @@ export const Navbar = () => {
   return (
     <>
         <nav 
-            className="w-full h-16 bg-black fixed flex justify-between items-center list-none 
-            font-sans backdrop-blur-sm bg-black/20   "
+            className="z-10 w-full h-16 bg-black fixed flex justify-between items-center list-none 
+            font-sans backdrop-blur-sm bg-black/40   "
         >
                     <li className="flex justify-center items-center">
                         <Image
@@ -15,7 +15,7 @@ export const Navbar = () => {
                             width={130}
                             height={130}
                             alt="Picture of the author"
-                            className="pl-5"
+                            className="pl-5 "
                         />
                     </li>
                     <li className="text-violet-100 ">
@@ -55,11 +55,6 @@ export const Navbar = () => {
                             href='#'
                         >
                             <PiInstagramLogoBold  className="p-2 cursor-pointer hover:text-violet-500 hover:duration-300" size={40}/>
-                        </Link>
-                        <Link
-                            href='#'
-                        >
-                            <PiLinkSimple  className="p-2 cursor-pointer hover:text-violet-500 hover:duration-300" size={40}/>
                         </Link>
                         <Link
                             href='#'

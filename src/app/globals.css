@@ -9,13 +9,11 @@ GeistMono: --font-geist-mono
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-.principal{
-  
+.principal{  
   background-color:rgb(119,39,129);
   background-image: radial-gradient(circle, rgba(60,50,129,0.4598433123249299) -50%, rgba(0,0,0,1) 100%);
-
-
 }
+
 
 .animation-title{
     animation:1s inicio 1;
@@ -74,3 +72,13 @@ GeistMono: --font-geist-mono
     transform: translateY(0px);
   }
 }
+@keyframes scale-up {
+	to { scale: 1.5; }
+}
+
+@keyframes fade-away {
+	to { opacity: 0; }
+}
+
+
+
