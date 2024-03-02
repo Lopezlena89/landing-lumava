@@ -1,5 +1,6 @@
 import { AnimationCard } from "../card/AnimationCard"
 import { TbWorldWww } from "react-icons/tb";
+
 export const PresenciaLinea = () => {
   return (
     <>

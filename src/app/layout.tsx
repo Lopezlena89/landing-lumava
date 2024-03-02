@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Providers } from "@/components/providers/Providers";
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
-
 import "./globals.css";
-import "../components/ui/animation-carousel/animationcarousell.css"
+
+
 
 
 export const metadata: Metadata = {
@@ -13,8 +13,7 @@ export const metadata: Metadata = {
   authors:[{name:'Luis Mariano Lopez Lena Valdivieso',url:'https://lumava.dev'}],
   abstract:'Page Lumava Agency',
   category:'Web services',
-  keywords:['portfolio','web design','Nextjs','React'],
-
+  keywords:["lumava","web design","diseño web","desarrollo apps"],
 };
 
 export default function RootLayout({
@@ -27,6 +26,7 @@ export default function RootLayout({
       <body >
         <Providers>
           {children}
+          
         </Providers>
       </body>
     </html>
