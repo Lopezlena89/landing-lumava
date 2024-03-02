@@ -15,7 +15,7 @@ import { NavbarMovil } from "@/components/ui/navbar/NavbarMovil";
 export default async function HomePage() {
     return(
         <>
-            <main>
+            <main >
                 <Navbar/>
                 <NavbarMovil/>
                 <section className="principal w-full h-[900px] flex flex-col overflow-hidden ">

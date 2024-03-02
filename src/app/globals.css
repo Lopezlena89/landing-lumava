@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-GeistSans: --font-geist-sans
-GeistMono: --font-geist-mono
+
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
