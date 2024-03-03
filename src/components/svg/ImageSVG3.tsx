@@ -1,11 +1,11 @@
 import * as React from "react"
-const SvgComponent3 = (props) => (
+const SvgComponent3 = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={1074}
     height={1101}
     fill="none"
-    {...props}
+    className="fixed"
   >
     <g strokeMiterlimit={10} opacity={0.2}>
       <path

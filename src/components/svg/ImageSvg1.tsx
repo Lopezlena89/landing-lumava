@@ -1,11 +1,11 @@
 import * as React from "react"
-export const SvgComponent = (props) => (
+export const SvgComponent = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={1490}
     height={1136}
     fill="none"
-    {...props}
+    className="fixed"
   >
     <g
       stroke="#fff"

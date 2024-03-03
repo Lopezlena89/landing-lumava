@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Navbar } from "@/components/ui/navbar/Navbar";
 import { NavbarMovil } from "@/components/ui/navbar/NavbarMovil";
 import SvgComponent from "@/components/svg/ImageSvg1";
-import SvgComponent2 from "@/components/svg/ImageSvg2";
 import SvgComponent3 from "@/components/svg/ImageSVG3";
 
 
@@ -15,8 +14,8 @@ export default async function HomePage() {
             <main >
                 <Navbar/>
                 <NavbarMovil/>
-                <SvgComponent className="fixed"/>
-                <SvgComponent3 className="fixed"/>
+                <SvgComponent />
+                <SvgComponent3/>
                 <section className="principal w-full h-full  flex flex-col  overflow-hidden ">
                     <div className="w-full h-full relative">
                         <div className="w-full h-[500px]  flex flex-col items-center justify-center  ">
