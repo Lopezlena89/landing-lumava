@@ -12,9 +12,8 @@
 }
 .principal{  
   background-color:rgb(119,39,129);
-  background-image: radial-gradient(circle, rgba(60,50,129,0.4598433123249299) -50%, rgba(0,0,0,1) 100%);
+  background-image: radial-gradient(circle, rgba(60,50,129,0.598433123249299) -50%, rgba(0,0,0,1) 100%);
 }
-
 .animation-title{
     animation:1s inicio 1;
 }
@@ -23,9 +22,17 @@
 }
 .animation-button{
   animation:1s inicio-button 1;
+  box-shadow:0px 0px 5px cyan;
+ 
+}
+.animation-button:hover{
+  transition:all 0.8s ease-in-out;
+  box-shadow:0px 0px 20px cyan;
+ 
 }
 .animation-imagen{
   animation:1s inicio-img 1;
+  
 }
 
 @keyframes inicio {
@@ -81,11 +88,12 @@
 }
 
 
-.imagen:hover{
+.imagen{
   filter:drop-shadow(
     0 0 50px rgba(88, 3, 128, 0.8)
-  )
+  );
   
+  transition:all 1s ;
 }
 
 
